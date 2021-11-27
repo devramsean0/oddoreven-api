@@ -1,8 +1,7 @@
-const fastify = require('fastify')
-const app = fastify()
-app.get('/', function (request, reply) {
-    reply.send("Our first route")
-})
+const fastify = require('fastify');
+const app = fastify();
+const routes = require('./routes.js');
+routes(app)
 app.listen(3000, function (err, address) {
     if (err) {
         console.error(err)
