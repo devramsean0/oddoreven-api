@@ -1,6 +1,7 @@
+const {domain, version} = require('./config.json')
 function routes(app) {
     app.get('/', function (request, reply) {
-        reply.send(`Docs: \n is it odd or even?: https://oddoreven.sean-outram.dev/oddoreven/{number} \n odd?: https://oddoreven.sean-outram.dev/odd/{number} \n even?:https://oddoreveb.sean-outram.dev/even/{number}`)
+        reply.send(`Docs: \n is it odd or even?: https://${domain}/v${version}/oddoreven/{number} \n odd?: https:/v${version}/${domain}//odd/{number} \n even?:https:/v${version}/${domain}//even/{number}`)
     })
 }
 module.exports = routes;
